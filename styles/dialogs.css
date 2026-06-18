@@ -1,0 +1,288 @@
+/* Order confirmed dialog */
+.order-confirmed-dialog {
+    width: 300px;
+    height: 250px;
+
+    background-color: rgba(54, 53, 52, 1);
+
+    border: none;
+    border-radius: 20px;
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+
+    color: rgba(253, 234, 220, 1);
+
+    padding: 30px;
+
+    position: absolute;
+    top: 10px;
+    margin: auto;
+}
+
+.order-confirmed-dialog {
+    display: none;
+}
+
+.order-confirmed-dialog[open] {
+    display: flex;
+}
+
+.order-confirmed-dialog button {
+    border: none;
+    background-color: inherit;
+
+    align-self: flex-end;
+}
+
+.order-confirmed-dialog>img {
+    width: 80px;
+    height: 60px;
+
+    margin: 15px;
+}
+
+.confirmed {
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+
+}
+
+.on-the-way {
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.order-confirmed-dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* backdrop-filter: blur(2px); */
+}
+
+/* Basket */
+.basket-dialog:not([open]) {
+    display: none;
+}
+.basket-dialog[open] {
+    display: flex;
+}
+
+dialog.basket-dialog {
+    display: none;
+}
+
+.basket-dialog {
+    padding: 10px 16px;
+    width: 90%; 
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(54, 53, 52, 1);
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: auto auto 80px auto; 
+    /* desktop */
+    /* margin: auto auto 80px auto; raus
+    width: 100%*/
+}
+
+.empty-shopping-car {
+    height: 120px;
+    width: 120px;
+}
+
+.empty-basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    padding-top: 20px;
+}
+
+#basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty-basket-content p {
+    color: rgba(253, 234, 220, 1);
+
+    font-family: 'Palanquin';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.close-btn-basket-dialog {
+    background-color: inherit;
+
+    border: none;
+
+    align-self: flex-end;
+}
+
+.basket-dialog>span {
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+    text-align: center;
+    color: rgba(253, 234, 220, 1);
+    line-height: 1;
+
+}
+
+.basket-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    height: 200px;
+
+    overflow-y: scroll;
+
+    padding-right: 5px;
+}
+
+/* Scrollbar: https://css-tricks.com/custom-scrollbars-in-webkit/ */
+.basket-items-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.basket-items-container::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+
+.basket-items-container::-webkit-scrollbar-thumb {
+    background-color: rgba(253, 234, 220, 1);
+
+    border-radius: 20px;
+}
+
+.basket-item {
+    background-color: rgba(253, 234, 220, 1);
+
+    color: rgba(54, 53, 52, 1);
+
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 22px;
+    line-height: 120%;
+
+    width: 100%;
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.item-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-delete-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.add-delete-item>img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-delete-item>span {
+    line-height: 1;
+    font-family: monospace;
+}
+
+.basket-summary {
+    font-family: Palanquin;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-top: auto;
+}
+
+.basket-summary div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 22px;
+    line-height: 120%;
+
+    border-top: 2px solid white;
+
+    padding-top: 10px;
+}
+
+.buy-now-btn {
+    background-color: rgba(231, 108, 31, 1);
+    color: white;
+    font-family: Palanquin;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    line-height: 1;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    width: fit-content;
+    align-self: center;
+}
+
+/* const dialog = document.querySelector('.order-confirmed-dialog');
+dialog.showModal(); */
+/* const dialog = document.querySelector('.basket-dialog');
+dialog.showModal(); */
+
+
+aside {
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    margin-left: auto;
+    margin-bottom: -595px;
+}
+
+/* Wenn aside display: none --> .basket-dialog  width: 100%; */

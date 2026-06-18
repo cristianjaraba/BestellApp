@@ -1,0 +1,97 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 60px 15px;
+}
+
+.hero-media{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+    padding-bottom: 70px;
+
+    position: relative;
+}
+
+.hero-img-wrapper{
+    height: 290px;
+    width: 290px;
+
+    background-image: url(../assets/images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: 250%;
+    background-position: bottom -30px left -100px;
+
+    border-radius: 15px;
+}
+
+.burger-logo-wrapper{
+    height: 120px;
+    width: 120px;
+
+    border: solid 10px bisque;
+    border-radius: 100%;
+
+    background-image: url(../assets/images/burger-log.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /* https://smoothshadows.com/#djEsMiwyLDAuMDksMzYsNDgsNDgsIzBiMGEwYSwjZmZmZmZmLCNmZmZmZmYsMw%3D%3D */
+    box-shadow: 12px 12px 9px rgba(11, 10, 10, 0.09),
+    48px 48px 36px rgba(11, 10, 10, 0.04);
+
+    position: absolute;
+    bottom: 10px
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.ratings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    background-color: #FACAAC;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Palanquin Dark';
+}
+.ratings-numbers{
+    color: #726D6D;
+
+    font-size: 18px;
+    font-family: 'Palanquin';
+}
+h1{
+    color: #E76C1F;
+
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Palanquin Dark';
+
+    line-height: 120%;
+}
+h1 span{
+    color: black;
+}
+h2{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Palanquin';
+
+    text-align: center;
+
+    line-height: 120%;
+}

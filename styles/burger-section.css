@@ -1,0 +1,53 @@
+.burger-section,
+.pizza-section,
+.salat-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.burger-section-header,
+.pizza-section-header,
+.salat-section-header{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+.burger-section-header img,
+.pizza-section-header img,
+.salat-section-header img{
+    height: 60px;
+    width: 58px;
+
+    position: absolute;
+    top: -45px;
+}
+.burger-section-header h3,
+.pizza-section-header h3,
+.salat-section-header h3{
+    height: 60px;
+    width: 100%;
+
+    background-color: #E76C1F;
+    color: white;
+
+    font-family: 'Palanquin';
+    font-size: 32px;
+    font-weight: bold;
+
+    text-align: center;
+}
+.pizza-section-header span{
+    font-weight: normal;
+    font-size: 24px;
+}
+.burger-section-meals,
+.pizza-section-meals{
+    padding: 30px 15px 60px 15px; 
+}
+.salat-section-meals{
+    padding: 30px 15px; 
+}
