@@ -90,6 +90,12 @@ nav{
   height: 24px;
   width: 24px;
 }
+.nav-list button{
+  background-color: inherit;
+  border: none;
+  height: 40px;
+  width: 40px;
+}
 .shopping-cart-counter{
   height: 20px;
   width: 20px;
@@ -108,14 +114,11 @@ nav{
   justify-content: center;
 
   position: absolute;
-  top: -10px;
-  right: -10px; 
+  top: -5px;
+  right: -5px; 
 }
-.shopping-cart{
 
-  fill: white;
-}
-.nav-list button{
+.basket-btn-mobile-version{
   position: relative;
 
   background-color: inherit;
@@ -127,4 +130,14 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+li button:active{
+  background-color: white;
+
+  border-radius: 5px;
+}
+
+li button:active path{
+  fill: rgba(231, 108, 31, 1);
 }

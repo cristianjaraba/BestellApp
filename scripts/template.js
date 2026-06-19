@@ -10,7 +10,7 @@ function getMealTemplate(meal_name, description, price, index) {
 
     <div class="meal-preis-and-btn">
         <p>${price}€</p>
-        <button onclick="addAmount(${index})">Add to basket</button>
+        <button id="add-btn-${index}" class="add-btn" onclick="addAmount(${index})">Add to basket</button>
     </div>
 
 </article>
@@ -31,15 +31,19 @@ function getFullBasketTemplate() {
 </div>`;
 }
 
-function getBasketMealTemplate(meal_name, price) {
+function getBasketMealTemplate(meal_name, price, index) {
     return`
 <div class="basket-item">
     <span>1 x ${meal_name}</span>
     <div class="item-summary">
         <div class="add-delete-item">
-            <img src="./assets/icons/delete.svg" alt="Icon eines Papierkorb">
-            <span>1</span>
-            <img src="./assets/icons/+.svg" alt="+ Icon">
+            <button onclick="subtractAmountBasketItem(${index})">
+                <img src="./assets/icons/-.svg" alt="- Icon">
+            </button>
+            <span id="quantity-of-${index}">${myMeals[index].amount}</span>
+            <button onclick="addAmountBasketItem(${index})">
+                <img src="./assets/icons/+.svg" alt="+ Icon">
+            </button>
         </div>
         <span>${price}€</span>
     </div>
@@ -75,6 +79,3 @@ function getEmptyBasketTemplate() {
     `;
 }
 
-function addAmount(index) {
-    myMeals[index].amount++;
-}

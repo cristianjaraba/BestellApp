@@ -70,3 +70,6 @@
     align-items: flex-start;
     gap: 15px;
 }
+.add-btn:hover{
+    color: rgba(231, 108, 31, 1);
+}

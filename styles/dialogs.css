@@ -14,7 +14,7 @@
 
     color: rgba(253, 234, 220, 1);
 
-    padding: 30px;
+    padding: 10px;
 
     position: absolute;
     top: 10px;
@@ -34,6 +34,8 @@
     background-color: inherit;
 
     align-self: flex-end;
+
+    cursor: pointer;
 }
 
 .order-confirmed-dialog>img {
@@ -131,6 +133,8 @@
     border: none;
 
     align-self: flex-end;
+
+    cursor: pointer;
 }
 
 .basket-dialog>span {
@@ -218,7 +222,16 @@
     line-height: 1;
     font-family: monospace;
 }
+.add-delete-item button{
+    background-color: inherit;
 
+    border: none;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
 .basket-summary {
     font-family: Palanquin;
     font-weight: 600;
@@ -264,6 +277,8 @@
     padding: 10px 20px;
     width: fit-content;
     align-self: center;
+
+    cursor: pointer;
 }
 
 /* const dialog = document.querySelector('.order-confirmed-dialog');
