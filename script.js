@@ -38,7 +38,7 @@ function renderOneMeal(container_id, index) {
 function disableAddBtn(index) {
     const addBtnRef = document.getElementById(`add-btn-${index}`);
     addBtnRef.style.color = 'rgba(231, 108, 31, 1)';
-    addBtnRef.innerHTML = `Added 1`;
+    addBtnRef.innerHTML = `Added ${myMeals[index].amount}`;
     addBtnRef.disabled = true;
 }
 
@@ -74,6 +74,9 @@ function subtractAmount(index) {
     updateShoppingCartCounter();
     if (myMeals[index].amount == 0) {
         ableAddBtn(index);
+    }
+    if (myMeals[index].amount > 0) {
+        document.getElementById(`add-btn-${index}`).innerHTML = `Added ${myMeals[index].amount}`;
     }
 }
 
@@ -164,4 +167,7 @@ function emptyAmountsFromItems() {
 
 function closeConfirmedOrderDialog() {
     document.getElementById('order-confirmed-dialog').close();
+    for (let index = 0; index < myMeals.length; index++) {
+        ableAddBtn(index);
+    }
 }

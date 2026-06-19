@@ -141,3 +141,7 @@ li button:active{
 li button:active path{
   fill: rgba(231, 108, 31, 1);
 }
+
+.basket-btn-mobile-version:active path{
+  fill: rgba(231, 108, 31, 1) !important;
+}
