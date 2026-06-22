@@ -6,7 +6,7 @@ const myMeals = [
     "description": "Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ sauce",
     "img_src": "../assets/images/burgers-imgs/all-meat-burger.jpg",
     "amount": 0,
-    "category": "burger"
+    "category": "burgers"
   },
   {
     "name": "Beef red burger",
@@ -14,7 +14,7 @@ const myMeals = [
     "description": "Beef, Cheese, Tomatoes, Lettuce, Onion",
     "img_src": "../assets/images/burgers-imgs/beef-red-burger.jpg",
     "amount": 0,
-    "category": "burger"
+    "category": "burgers"
   },
   {
     "name": "Big chicken burger",
@@ -22,7 +22,7 @@ const myMeals = [
     "description": "Chicken, Cheese, Tomatoes, Lettuce, Onion, Bell pepper",
     "img_src": "../assets/images/burgers-imgs/big-chicken-burger.jpg",
     "amount": 0,
-    "category": "burger"
+    "category": "burgers"
   },
 
   // PIZZAS
@@ -32,7 +32,7 @@ const myMeals = [
     "description": "Tomato sauce, Mozzarella",
     "img_src": "../assets/images/pizza-imgs/pizza-margherita.jpg",
     "amount": 0,
-    "category": "pizza"
+    "category": "pizzas"
   },
   {
     "name": "Pizza Chorizo",
@@ -40,7 +40,7 @@ const myMeals = [
     "description": "Tomato slices, Mozzarella, Chorizo",
     "img_src": "../assets/images/pizza-imgs/pizza-chorizo.jpg",
     "amount": 0,
-    "category": "pizza"
+    "category": "pizzas"
   },
   {
     "name": "Funghi",
@@ -48,7 +48,7 @@ const myMeals = [
     "description": "Red onion, Olives, Button mushrooms, Mozzarella",
     "img_src": "../assets/images/pizza-imgs/funghi.jpg",
     "amount": 0,
-    "category": "pizza"
+    "category": "pizzas"
   },
   {
     "name": "Quattro Formaggi with Chicken",
@@ -56,7 +56,7 @@ const myMeals = [
     "description": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano",
     "img_src": "../assets/images/pizza-imgs/quattro-formaggi-chicken.jpg",
     "amount": 0,
-    "category": "pizza"
+    "category": "pizzas"
   },
 
   // SALADS
@@ -66,7 +66,7 @@ const myMeals = [
     "description": "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried tomatoes, Balsamic-vinegar dressing",
     "img_src": "../assets/images/salads-imgs/warm-beef-arugula-salad.jpg",
     "amount": 0,
-    "category": "salad"
+    "category": "salads"
   },
   {
     "name": "Mini green salad",
@@ -74,7 +74,7 @@ const myMeals = [
     "description": "Green salad, Cucumber, Carrots, Parsley, Radishes",
     "img_src": "../assets/images/salads-imgs/mini-green-salad.jpg",
     "amount": 0,
-    "category": "salad"
+    "category": "salads"
   },
   {
     "name": "Green salad with seafood",
@@ -82,7 +82,7 @@ const myMeals = [
     "description": "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill",
     "img_src": "../assets/images/salads-imgs/green-seafood-salad.jpg",
     "amount": 0,
-    "category": "salad"
+    "category": "salads"
   },
   {
     "name": "Vegan green salad with tofu",
@@ -90,6 +90,6 @@ const myMeals = [
     "description": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
     "img_src": "../assets/images/salads-imgs/vegan-green-salad-tofu.jpg",
     "amount": 0,
-    "category": "salad"
+    "category": "salads"
   }
 ];

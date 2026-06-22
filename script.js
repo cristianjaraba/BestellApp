@@ -1,3 +1,7 @@
+let subtotal = 0.00;
+let deliveryFee = 4.99;
+let total = 0.00;
+
 function init() {
     renderMeals();
     updateShoppingCartCounter();
@@ -5,30 +9,15 @@ function init() {
 
 function renderMeals() {
     for (let index = 0; index < myMeals.length; index++) {
-        switch (myMeals[index].category) {
-            case 'burger':
-                renderOneMeal('burgers-container', index);
-                break;
-            case 'pizza':
-                renderOneMeal('pizzas-container', index);
-                break;
-            case 'salad':
-                renderOneMeal('salads-container', index);
-                break;
-            default:
-                break;
-        }
+        renderOneMeal(myMeals[index].category + '-container', index);             
     }
 }
 
 function renderOneMeal(container_id, index) {
-    document.getElementById(container_id).innerHTML += getMealTemplate(myMeals[index].name,
-        myMeals[index].description,
-        myMeals[index].price,
-        index
-    );
-    document.getElementById(`meal-media-${index}`).style.backgroundImage = `url(${myMeals[index].img_src})`;
-    if (myMeals[index].amount == 0) {
+    const currentMeal = myMeals[index];
+    document.getElementById(container_id).innerHTML += getMealTemplate(currentMeal.name, currentMeal.description, currentMeal.price, index);
+    document.getElementById(`meal-media-${index}`).style.backgroundImage = `url(${currentMeal.img_src})`;
+    if (currentMeal.amount == 0) {
         ableAddBtn(index);
     } else {
         disableAddBtn(index);
@@ -50,33 +39,86 @@ function ableAddBtn(index) {
 }
 
 function showBasket() {
-    const basketRef = document.getElementById('basket');
-    basketRef.showModal();
     for (let index = 0; index < myMeals.length; index++) {
         if (myMeals[index].amount > 0) {
-            basketRef.innerHTML = getFullBasketTemplate();
-            renderBasketMeals();
-            renderBasketSummary();
+            document.getElementById('basket').innerHTML = getFullBasketTemplate();
+            renderBasketsAndSummaries();
+            if (isDesktopBasketNotDisplayed()) { 
+                document.getElementById('basket').showModal();
+            } 
             return;
         }
     }
-    basketRef.innerHTML = getEmptyBasketTemplate();
+    getEmtpyBasketsTemplates();
+    if (isDesktopBasketNotDisplayed()) {
+        document.getElementById('basket').showModal();
+    } 
+}
+
+function renderBasketsAndSummaries() {
+    renderBasketMeals();
+    renderBasketSummary();
+    renderBasketMealsDesktop();
+    renderBasketSummaryDesktop();
+}
+
+function getEmtpyBasketsTemplates() {
+    document.getElementById('basket').innerHTML = getEmptyBasketTemplate();
+    document.getElementById('aside').innerHTML = getEmptyDesktopBasketTemplate();
+}
+
+function isDesktopBasketNotDisplayed() {
+    //https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+    return getComputedStyle(document.getElementById('aside')).display === 'none';
+}
+
+function renderBasketMealsDesktop() {
+    const asideRef = document.getElementById('aside');
+    asideRef.innerHTML = getFullDesktopBasketTemplate();
+    for (let index = 0; index < myMeals.length; index++) {
+        if (myMeals[index].amount > 0) {
+            document.getElementById('basket-items-container-desktop').innerHTML += getDesktopBasketMealTemplate(myMeals[index].name, 
+            myMeals[index].price,
+            index); 
+        }
+    }   
+}
+
+function renderBasketSummaryDesktop() {
+    subtotal = 0.00;
+    total = 0.00;
+    for (let index = 0; index < myMeals.length; index++) {
+        if (myMeals[index].amount > 0) { 
+            subtotal += myMeals[index].price * myMeals[index].amount;
+        }
+    }
+    total = subtotal + deliveryFee;
+    document.getElementById('basket-summary-desktop').innerHTML = getDesktopBasketSummaryTemplate(subtotal.toFixed(2), deliveryFee, total.toFixed(2));   
+    if (deliveryFee == 0) {
+        document.getElementById('pick-up-desktop').checked = true;
+    } 
+    else{
+        document.getElementById('pick-up-desktop').checked = false;
+    }
 }
 
 function addAmount(index) {
     myMeals[index].amount += 1;
+    renderBasketMealsDesktop();
+    renderBasketSummaryDesktop();
     updateShoppingCartCounter();
     disableAddBtn(index);
 }
 
 function subtractAmount(index) {
-    myMeals[index].amount -= 1;
+    const currentMeal = myMeals[index]; 
+    currentMeal.amount -= 1;
     updateShoppingCartCounter();
-    if (myMeals[index].amount == 0) {
+    if (currentMeal.amount == 0) {
         ableAddBtn(index);
     }
-    if (myMeals[index].amount > 0) {
-        document.getElementById(`add-btn-${index}`).innerHTML = `Added ${myMeals[index].amount}`;
+    if (currentMeal.amount > 0) {
+        document.getElementById(`add-btn-${index}`).innerHTML = `Added ${currentMeal.amount}`;
     }
 }
 
@@ -90,10 +132,23 @@ function renderBasketMeals() {
     }   
 }
 
+function updateDeliveryFee() {
+    if (deliveryFee == 0) {
+        deliveryFee = 4.99;
+    } 
+    else{
+        deliveryFee = 0;
+    }
+    renderBasketSummary();
+    renderBasketSummaryDesktop();
+}
+
 function renderBasketSummary() {
-    let subtotal = 0.00;
-    let deliveryFee = 4.99;
-    let total = 0.00;
+    if (document.getElementById('basket-summary') == null) {
+        return;
+    }
+    subtotal = 0.00;
+    total = 0.00;
     for (let index = 0; index < myMeals.length; index++) {
         if (myMeals[index].amount > 0) { 
             subtotal += myMeals[index].price * myMeals[index].amount;
@@ -101,10 +156,19 @@ function renderBasketSummary() {
     }
     total = subtotal + deliveryFee;
     document.getElementById('basket-summary').innerHTML = getBasketSummaryTemplate(subtotal.toFixed(2), deliveryFee, total.toFixed(2));   
+    if (deliveryFee == 0) {
+        document.getElementById('pick-up').checked = true;
+    } 
+    else{
+        document.getElementById('pick-up').checked = false;
+    }
 }
 
 function updateShoppingCartCounter(){
     let counter = 0;
+    if(document.getElementById('shopping-cart-counter') == null){
+        return;
+    }
     const counterRef = document.getElementById('shopping-cart-counter');
     for (let index = 0; index < myMeals.length; index++) {
         counter += myMeals[index].amount;
@@ -120,19 +184,35 @@ function updateShoppingCartCounter(){
 }
 
 function addAmountBasketItem(index) {
-    const quantityRef = document.getElementById(`quantity-of-${index}`);
+    if (document.getElementById(`quantity-of-${index}-desktop`) != null) {
+        const quantityRefDesktop = document.getElementById(`quantity-of-${index}-desktop`);
+        quantityRefDesktop.innerHTML = parseInt(quantityRefDesktop.innerHTML) + 1;
+    } 
+    if (document.getElementById(`quantity-of-${index}`) != null) {
+        const quantityRef = document.getElementById(`quantity-of-${index}`);
+        quantityRef.innerHTML = parseInt(quantityRef.innerHTML) + 1;
+    }
     addAmount(index);
     renderBasketSummary();
-    quantityRef.innerHTML = parseInt(quantityRef.innerHTML) + 1;
 }
 
 function subtractAmountBasketItem(index) {
-    const quantityRef = document.getElementById(`quantity-of-${index}`);
     subtractAmount(index);
     renderBasketSummary();
-    quantityRef.innerHTML = parseInt(quantityRef.innerHTML) - 1;
-    if (quantityRef.innerHTML == 0) {
-        showBasket();
+    renderBasketSummaryDesktop()
+    if (document.getElementById(`quantity-of-${index}-desktop`) != null) {
+        const quantityRefDesktop = document.getElementById(`quantity-of-${index}-desktop`);
+        quantityRefDesktop.innerHTML = parseInt(quantityRefDesktop.innerHTML) - 1;
+        if (quantityRefDesktop.innerHTML == 0) {
+            showBasket();
+        }
+    } 
+    if (document.getElementById(`quantity-of-${index}`) != null) {
+        const quantityRef = document.getElementById(`quantity-of-${index}`);
+        quantityRef.innerHTML = parseInt(quantityRef.innerHTML) - 1;
+        if (quantityRef.innerHTML == 0) {
+            showBasket();
+        }
     }
 }
 
@@ -140,11 +220,17 @@ function closeBasket() {
     document.getElementById('basket').close();
 }
 
+function emptyDesktopBasket() {
+    const asideRef = document.getElementById('aside');
+    asideRef.innerHTML = getEmptyDesktopBasketTemplate();
+}
+
 function showOrderConfirmedDialog() {
     closeBasket();
     updateAddBtn();
     emptyAmountsFromItems();
     updateShoppingCartCounter();
+    emptyDesktopBasket();
     document.getElementById('order-confirmed-dialog').showModal();
 }
 

@@ -69,10 +69,10 @@
 }
 
 /* Basket */
-.basket-dialog:not([open]) {
+dialog.basket-dialog:not([open]) {
     display: none;
 }
-.basket-dialog[open] {
+dialog.basket-dialog[open] {
     display: flex;
 }
 
@@ -281,19 +281,26 @@
     cursor: pointer;
 }
 
-/* const dialog = document.querySelector('.order-confirmed-dialog');
-dialog.showModal(); */
-/* const dialog = document.querySelector('.basket-dialog');
-dialog.showModal(); */
-
-
 aside {
     display: none;
     position: sticky;
     top: 0;
     z-index: 9999;
     margin-left: auto;
-    margin-bottom: -595px;
+    margin-bottom: -548px;
+    height: 550px;
+    width: 25%;
 }
 
-/* Wenn aside display: none --> .basket-dialog  width: 100%; */
+input{
+    accent-color: rgba(231, 108, 31, 1);
+    cursor: pointer;
+}
+.basket-dialog span,
+.basket-dialog button{
+    font-variant-numeric: tabular-nums;
+}
+aside span,
+aside button{
+    font-variant-numeric: tabular-nums;
+}
