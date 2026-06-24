@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellApp</title>
+
+    <!-- https://favicon.im/de/blog/favicon-for-light-dark-modes -->
+    <!-- Standard-Favicon (Fallback für nicht unterstützte Browser) -->
+    <link rel="icon" href="./assets/icons/burger-icon.svg" type="image/x-icon">
+
+    <!-- Hellmodus-Favicon -->
+    <link rel="icon" href="./assets/icons/logo-black.svg" type="image/x-icon" media="(prefers-color-scheme: light)">
+
+    <!-- Dunkelmodus-Favicon -->
+    <link rel="icon" href="./assets/icons/bestell-app-logo.svg" type="image/x-icon"
+        media="(prefers-color-scheme: dark)">
+
+    <link rel="stylesheet" href="./styles/imprint.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/burger-section.css">
+    <link rel="stylesheet" href="./styles/meal.css">
+    <link rel="stylesheet" href="./styles/dialogs.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <div class="logo-container">
+                <img class="header-media" src="./assets/icons/bestell-app-logo.svg" alt="Icon einer Tüte">
+                <div class="header-text">
+                    <span class="header-text-1">Bestell</span>
+                    <span class="header-text-2">App</span>
+                </div>
+            </div>
+            <img class="menu-icon" src="./assets/icons/dehaze.svg" alt="3 horizontal lines">
+        </header>
+
+        <main>
+            <section class="imprint">
+                <h1>Imprint</h1>
+                <p>Information pursuant to Section 5 DDG</p>
+
+                <div class="imprint-block">
+                    <p>Developer e.V.<br>
+                        c/o Sample Office<br>
+                        Sample Street<br>
+                        12345 Sample City
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>Represented by:</strong><br>
+                        Cristian Jaraba
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>Contact:</strong><br>
+                        Phone: 01234-789456<br>
+                        Fax: 1234-56789<br>
+                        E-mail: <a href="mailto:max@muster.de">max@muster.de</a>
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>VAT ID:</strong><br>
+                        VAT identification number pursuant to Section 27a of the German VAT Act: Sample VAT ID.
+                    </p>
+                    <p><strong>Business ID:</strong><br>
+                        Sample business ID
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>Supervisory Authority:</strong><br>
+                        Sample supervisory authority Sample City
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>Consumer Dispute Resolution / Universal Arbitration Board</strong><br>
+                        We do not participate in dispute resolution proceedings before a consumer arbitration board and
+                        are not obliged to do so.
+                    </p>
+                </div>
+
+                <div class="imprint-block">
+                    <p><strong>Disclaimer:</strong></p>
+                    <div class="disclaimer">
+                        <p><strong>Liability for Content</strong><br>
+                            The contents of our pages have been created with the utmost care. However, we cannot
+                            guarantee the accuracy,
+                            completeness, or timeliness of the content. As a service provider, we are responsible for
+                            our own content
+                            on these pages in accordance with Section 7 (1) DDG and general laws. According to Sections
+                            8 to 10 DDG,
+                            however, we are not obliged as a service provider to monitor transmitted or stored
+                            third-party information
+                            or to investigate circumstances that indicate illegal activity. Obligations to remove or
+                            block the use of
+                            information under general laws remain unaffected. Liability in this regard is only possible
+                            from the time
+                            we become aware of a specific legal violation. Upon becoming aware of such violations, we
+                            will remove the
+                            content immediately.
+                        </p>
+
+                        <p><strong>Liability for Links</strong><br>
+                            Our website contains links to external third-party websites, over whose content we have no
+                            influence.
+                            Therefore, we cannot assume any liability for such external content. The respective provider
+                            or operator
+                            of the linked pages is always responsible for their content. The linked pages were checked
+                            for possible
+                            legal violations at the time of linking. Illegal content was not recognizable at that time.
+                            Permanent
+                            monitoring of the linked pages is not reasonable without concrete evidence of a violation.
+                            If we become
+                            aware of any legal violations, we will remove such links immediately.
+                        </p>
+
+                        <p><strong>Copyright</strong><br>
+                            The content and works created by the site operators on these pages are subject to German
+                            copyright law.
+                            Reproduction, editing, distribution, and any kind of use beyond the limits of copyright law
+                            require the
+                            written consent of the respective author or creator. Downloads and copies of this site are
+                            permitted only
+                            for private, non-commercial use. Where content on this site was not created by the operator,
+                            third-party
+                            copyrights are respected. In particular, third-party content is marked as such. If you
+                            nevertheless become
+                            aware of a copyright infringement, please inform us accordingly. Upon becoming aware of
+                            legal violations,
+                            we will remove such content immediately.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="imprint-source">
+                    Imprint by <a href="https://imprint-generator.de" rel="dofollow">imprint-generator.de</a>.
+                    Powered by <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Franziska Hasselbach,
+                        Bonn</a>.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="#">Imprint</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li>&copy; 2025 BurgerHouse</li>
+            </ul>
+        </footer>
+    </body>
+
+</html>

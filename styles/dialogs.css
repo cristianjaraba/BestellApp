@@ -72,13 +72,14 @@
 dialog.basket-dialog:not([open]) {
     display: none;
 }
+
 dialog.basket-dialog[open] {
     display: flex;
 }
 
 .basket-dialog {
     padding: 10px 16px;
-    width: 90%; 
+    width: 90%;
     border: none;
     display: flex;
     flex-direction: column;
@@ -88,10 +89,8 @@ dialog.basket-dialog[open] {
     color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin: auto auto 80px auto; 
-    /* desktop */
-    /* margin: auto auto 80px auto; raus
-    width: 100%*/
+    margin: auto auto 80px auto;
+    max-width: 500px;
 }
 
 .empty-shopping-car {
@@ -159,6 +158,8 @@ dialog.basket-dialog[open] {
     overflow-y: scroll;
 
     padding-right: 5px;
+
+    width: 100%;
 }
 
 /* Scrollbar: https://css-tricks.com/custom-scrollbars-in-webkit/ */
@@ -222,7 +223,8 @@ dialog.basket-dialog[open] {
     line-height: 1;
     font-family: monospace;
 }
-.add-delete-item button{
+
+.add-delete-item button {
     background-color: inherit;
 
     border: none;
@@ -232,6 +234,7 @@ dialog.basket-dialog[open] {
 
     cursor: pointer;
 }
+
 .basket-summary {
     font-family: Palanquin;
     font-weight: 600;
@@ -292,15 +295,17 @@ aside {
     width: 25%;
 }
 
-input{
+input {
     accent-color: rgba(231, 108, 31, 1);
     cursor: pointer;
 }
+
 .basket-dialog span,
-.basket-dialog button{
+.basket-dialog button {
     font-variant-numeric: tabular-nums;
 }
+
 aside span,
-aside button{
+aside button {
     font-variant-numeric: tabular-nums;
 }

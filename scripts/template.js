@@ -3,16 +3,17 @@ function getMealTemplate(meal_name, description, price, index) {
 <article class="meal">
 
     <div id="meal-media-${index}" class="meal-media"></div>
+    <!-- <div class="meal-container"> -->
         <div class="meal-text">
             <h4>${meal_name}</h4>
             <h5>${description}</h5>
         </div>
 
-    <div class="meal-preis-and-btn">
-        <p>${price}€</p>
-        <button id="add-btn-${index}" class="add-btn" onclick="addAmount(${index})">Add to basket</button>
-    </div>
-
+        <div class="meal-preis-and-btn">
+            <p>${price}€</p>
+            <button id="add-btn-${index}" class="add-btn" onclick="addAmount(${index})">Add to basket</button>
+        </div>
+    <!-- </div> -->
 </article>
     `;
 }
@@ -78,7 +79,7 @@ function getBasketSummaryTemplate(subtotal, deliverdeliveryFee, total) {
     <input onclick="updateDeliveryFee()" type="checkbox" name="pick-up" id="pick-up" value="pick-up">
 </div>
 <div class="total">Total <span>${total}€</span></div>
-<button onclick="showOrderConfirmedDialog()" class="buy-now-btn">Buy now (${total}€)</button>    
+<button onclick="showOrderConfirmedDialog()" class="buy-now-btn">Buy&nbsp;now&nbsp;(<span class="test">${total}</span>€)</button>    
 `;
 }
 
@@ -91,7 +92,7 @@ function getDesktopBasketSummaryTemplate(subtotal, deliverdeliveryFee, total) {
     <input onclick="updateDeliveryFee()" type="checkbox" name="pick-up" id="pick-up-desktop" value="pick-up">
 </div>
 <div class="total">Total <span>${total}€</span></div>
-<button onclick="showOrderConfirmedDialog()" class="buy-now-btn">Buy now (${total}€)</button>    
+<button onclick="showOrderConfirmedDialog()" class="buy-now-btn">Buy&nbsp;now&nbsp;(<span class="test">${total}</span>€)</button>    
 `;
 }
 

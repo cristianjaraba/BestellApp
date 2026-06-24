@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BestellApp</title>
 
+    <!-- https://favicon.im/de/blog/favicon-for-light-dark-modes -->
+    <!-- Standard-Favicon (Fallback für nicht unterstützte Browser) -->
+    <link rel="icon" href="./assets/icons/burger-icon.svg" type="image/x-icon">
+
+    <!-- Hellmodus-Favicon -->
+    <link rel="icon" href="./assets/icons/logo-black.svg" type="image/x-icon" media="(prefers-color-scheme: light)">
+
+    <!-- Dunkelmodus-Favicon -->
+    <link rel="icon" href="./assets/icons/bestell-app-logo.svg" type="image/x-icon"
+        media="(prefers-color-scheme: dark)">
+
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/burger-section.css">
     <link rel="stylesheet" href="./styles/meal.css">
     <link rel="stylesheet" href="./styles/dialogs.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./style.css">
 
     <script src="./scripts/db.js"></script>
@@ -19,13 +31,18 @@
     <script src="./script.js"></script>
 </head>
 
+
+
 <body onload="init()">
     <header>
-        <img class="header-media" src="./assets/icons/bestell-app-logo.svg" alt="Icon einer Tüte">
-        <div class="header-text">
-            <span class="header-text-1">Bestell</span>
-            <span class="header-text-2">App</span>
+        <div class="logo-container">
+            <img class="header-media" src="./assets/icons/bestell-app-logo.svg" alt="Icon einer Tüte">
+            <div class="header-text">
+                <span class="header-text-1">Bestell</span>
+                <span class="header-text-2">App</span>
+            </div>
         </div>
+        <img class="menu-icon" src="./assets/icons/dehaze.svg" alt="3 horizontal lines">
     </header>
 
     <main>
@@ -38,12 +55,14 @@
                 </div>
             </div>
             <div class="hero-text">
-                <div class="ratings">
-                    <img src="./assets/icons/star-icon.svg" alt="Icon eines Sterns">
-                    <p>4,1</p>
-                    <p class="ratings-numbers">(317)</p>
+                <div class="rating-title-container">
+                    <div class="ratings">
+                        <img src="./assets/icons/star-icon.svg" alt="Icon eines Sterns">
+                        <p>4,1</p>
+                        <p class="ratings-numbers">(317)</p>
+                    </div>
+                    <h1>Burger<span>House</span></h1>
                 </div>
-                <h1>Burger<span>House</span></h1>
                 <h2>The best of Burgers, Pizza and Greens, all in one great place.</h2>
             </div>
         </section>
@@ -67,11 +86,10 @@
 
 
 
-
         <section class="burger-section">
             <header class="burger-section-header">
                 <img src="./assets/icons/burger-icon.svg" alt="Icons eines Burgers">
-                <h3>Burger</h3>
+                <h3>Burger <span class="sandwiches">& Sandwiches</span></h3>
             </header>
             <div class="burger-section-meals">
                 <div id="burgers-container" class="items-container">
@@ -106,7 +124,7 @@
 
     <footer>
         <ul>
-            <li><a href="#">Imprint</a></li>
+            <li><a href="./imprint.html" target="_blank">Imprint</a></li>
             <li><a href="#">Cookie Preferences</a></li>
             <li>&copy; 2025 BurgerHouse</li>
         </ul>

@@ -1,4 +1,4 @@
-.meal{
+.meal {
     background-color: #FDEADC;
 
     border-radius: 10px;
@@ -13,11 +13,11 @@
 
     display: flex;
     flex-direction: column;
-    gap:5px;
-    
+    gap: 5px;
+
 }
 
-.meal-media{
+.meal-media {
     width: 270px;
     height: 85px;
 
@@ -26,12 +26,14 @@
     /* background-image: url(../assets/images/burgers-imgs/veggie-mushroom-black-burger.jpg);  */
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center ; 
+    background-position: center;
 }
-.meal-text{
+
+.meal-text {
     flex: 1;
 }
-.meal-text h4{
+
+.meal-text h4 {
     font-size: 24px;
     font-weight: 600;
 
@@ -39,37 +41,44 @@
 
     padding-bottom: 2.5px;
 }
-.meal-text h5{
+
+.meal-text h5 {
     font-size: 16px;
     font-weight: 500;
 
     line-height: 120%;
 }
-.meal-preis-and-btn{
+
+.meal-preis-and-btn {
     display: flex;
     justify-content: space-between;
 }
-.meal-preis-and-btn p{
+
+.meal-preis-and-btn p {
     font-size: 24px;
     font-weight: 600;
 }
-.meal-preis-and-btn button{
+
+.meal-preis-and-btn button {
     font-size: 16px;
     font-weight: 600;
 
     background-color: white;
-    
+
     border-radius: 20px;
     border: none;
 
     cursor: pointer;
 }
-.items-container{
+
+.items-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
 }
-.add-btn:hover{
-    color: rgba(231, 108, 31, 1);
+
+.add-btn {
+    color: black;
+    transition: color 0.5s, box-shadow 0.5s;
 }

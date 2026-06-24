@@ -18,6 +18,11 @@ body > header{
   height: 35px;
   width: 32px;
 }
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 .header-text{
   line-height: 100%;
 
@@ -31,11 +36,15 @@ body > header{
 .header-text-2{
   font-size: 26px;
 }
+.menu-icon{
+  display: none;
+}
 main{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 footer{
   height: 130px;
   width: 100%;
@@ -146,30 +155,3 @@ li button:active path{
   fill: rgba(231, 108, 31, 1) !important;
 }
 
-/* Responsive design */
-
-@media (max-width: 480px) {
-    
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-   
-}
-
-@media (min-width: 769px) and (max-width: 1279px) {
-    
-}
-
-
-@media (min-width: 1280px) {
-    aside{
-      display: flex;
-    }
-    .basket-dialog {
-    margin: 0; 
-    width: 100%;
-  }
-  dialog.basket-dialog{
-    display: none !important;
-  } 
-}

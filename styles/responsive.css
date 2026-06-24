@@ -1,0 +1,326 @@
+/* Responsive design */
+
+@media (max-width: 480px) {
+    .buy-now-btn {
+        width: 90%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .buy-now-btn {
+        width: 70%;
+    }
+
+    .meal-media {
+        width: 370px;
+        height: 170px;
+    }
+
+    .meal {
+        height: 330px;
+        width: 390px;
+    }
+
+    .hero-img-wrapper {
+        height: 389px;
+        width: 390px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+    .buy-now-btn {
+        width: 60%;
+    }
+
+    .meal-media {
+        width: 370px;
+        height: 170px;
+    }
+
+    .meal {
+        height: 330px;
+        width: 390px;
+    }
+
+    .hero-img-wrapper {
+        height: 389px;
+        width: 390px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .buy-now-btn {
+        width: 80%;
+    }
+
+    aside {
+        display: flex;
+    }
+
+    .basket-dialog {
+        margin: 0;
+        width: 100%;
+    }
+
+    dialog.basket-dialog {
+        display: none !important;
+    }
+
+    .burger-section,
+    .pizza-section,
+    .salat-section {
+        align-items: flex-start;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .items-container {
+        padding-left: max(calc(50% - 720px), 140px);
+    }
+
+    .burger-section-header img {
+        height: 90px;
+        width: 88px;
+        top: -13px;
+        left: 300px;
+    }
+
+    .pizza-section-header img {
+        height: 94px;
+        width: 88px;
+        top: -12px;
+        left: 300px;
+    }
+
+    .salat-section-header img {
+        height: 94px;
+        width: 88px;
+        top: -10px;
+        left: 300px;
+    }
+
+    .burger-section-header h3,
+    .pizza-section-header h3,
+    .salat-section-header h3 {
+        text-align: unset;
+        padding-left: 400px;
+        /* display: flex;
+        align-items: end;
+        gap: 10px; */
+    }
+
+    .sandwiches {
+        display: inline;
+    }
+
+    .menu-icon {
+        display: flex !important;
+        width: 35px;
+        height: 30px;
+    }
+
+    body>header {
+        padding-left: max(calc(50% - 720px), 140px) !important;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 40px !important;
+    }
+
+    .header-text-2 {
+        text-transform: uppercase;
+    }
+
+    .hero-img-wrapper {
+        height: 400px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 107%;
+        background-position: bottom -104px left 0px;
+        border-radius: 0px;
+    }
+
+    .hero {
+        padding: 0px 0px 60px 0px;
+    }
+
+    .burger-logo-wrapper {
+        height: 200px;
+        width: 200px;
+        bottom: -8px;
+    }
+
+    .rating-title-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 40px !important;
+    }
+
+    article.meal {
+        /* https://cssgridgenerator.io/ */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+
+        width: 790px;
+        height: 215px;
+    }
+
+    .meal {
+        padding: 15px;
+    }
+
+    .meal-media {
+        /* https://cssgridgenerator.io/ */
+        grid-row: span 2 / span 2;
+        grid-column: span 2 / span 2;
+    }
+
+    .meal-text {
+        /* https://cssgridgenerator.io/ */
+        grid-column: span 2 / span 2;
+        grid-row: span 2 / span 2;
+
+    }
+
+    .meal-preis-and-btn {
+        /* https://cssgridgenerator.io/ */
+        grid-row: span 2 / span 2;
+        grid-column-start: 5;
+    }
+
+    .meal-media {
+        height: 185px;
+        width: 310px;
+    }
+
+    .meal-preis-and-btn {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    #meal-media-0 {
+        background-size: 109%;
+        background-position: bottom -98px left -20px;
+    }
+
+    #meal-media-1 {
+        background-size: 130%;
+        background-position: bottom -13px left -93px;
+    }
+
+    #meal-media-2 {
+        background-size: 185%;
+        background-position: bottom -102px left -56px;
+    }
+
+    #meal-media-4 {
+        background-size: 185%;
+        background-position: bottom -102px left -164px;
+    }
+
+    #meal-media-5 {
+        background-size: 118%;
+        background-position: bottom -41px left -56px;
+    }
+
+    #meal-media-6 {
+        background-size: 103%;
+        background-position: bottom -30px left 5px;
+    }
+
+    #meal-media-7 {
+        background-size: 103%;
+        background-position: bottom -40px left -4px;
+    }
+
+    #meal-media-8 {
+        background-size: 130%;
+        background-position: bottom -40px left -75px;
+    }
+
+    #meal-media-9 {
+        background-size: 125%;
+        background-position: bottom -47px left -48px;
+    }
+
+    #meal-media-10 {
+        background-size: 103%;
+        background-position: bottom -13px left -4px;
+    }
+
+    #meal-media-11 {
+        background-size: 107%;
+        background-position: bottom -4px left -4px;
+    }
+
+    .meal-text h4 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .meal-text h5 {
+        font-size: 20px;
+    }
+
+    .meal-preis-and-btn p {
+        font-size: 28px;
+    }
+
+    .meal-preis-and-btn button {
+        width: 130px;
+        padding: 10px;
+    }
+
+    .add-btn:hover {
+        color: rgba(231, 108, 31, 1) !important;
+        /* https://smoothshadows.com/#djEsMSw1LDAuMDgsMjQsMzIsMCwjMDMwNzEyLCNmM2Y0ZjYsI2ZmZmZmZiwy */
+        /* https://smoothshadows.com/#djEsMSw1LDAuMDgsMjQsMCwwLCMwMzA3MTIsI2YzZjRmNiwjZmZmZmZmLDI%3D */
+        box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.02),
+            0px 0px 4px rgba(3, 7, 18, 0.03),
+            0px 0px 9px rgba(3, 7, 18, 0.05),
+            0px 0px 15px rgba(3, 7, 18, 0.06),
+            0px 0px 24px rgba(3, 7, 18, 0.08);
+    }
+
+    .basket-dialog {
+
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+    footer {
+        height: 80px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    article.meal {
+
+        width: 900px;
+    }
+}

@@ -1,20 +1,23 @@
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     padding: 30px 15px 60px 15px;
+    width: 100%;
 }
 
-.hero-media{
+.hero-media {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    
+
     padding-bottom: 70px;
 
     position: relative;
+
+    width: 100%;
 }
 
-.hero-img-wrapper{
+.hero-img-wrapper {
     height: 290px;
     width: 290px;
 
@@ -26,7 +29,7 @@
     border-radius: 15px;
 }
 
-.burger-logo-wrapper{
+.burger-logo-wrapper {
     height: 120px;
     width: 120px;
 
@@ -40,19 +43,29 @@
 
     /* https://smoothshadows.com/#djEsMiwyLDAuMDksMzYsNDgsNDgsIzBiMGEwYSwjZmZmZmZmLCNmZmZmZmYsMw%3D%3D */
     box-shadow: 12px 12px 9px rgba(11, 10, 10, 0.09),
-    48px 48px 36px rgba(11, 10, 10, 0.04);
+        48px 48px 36px rgba(11, 10, 10, 0.04);
 
     position: absolute;
     bottom: 10px
 }
 
-.hero-text{
+.hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
 }
-.ratings{
+
+.rating-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ratings {
+    width: fit-content;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,13 +81,15 @@
     font-weight: normal;
     font-family: 'Palanquin Dark';
 }
-.ratings-numbers{
+
+.ratings-numbers {
     color: #726D6D;
 
     font-size: 18px;
     font-family: 'Palanquin';
 }
-h1{
+
+h1 {
     color: #E76C1F;
 
     font-size: 40px;
@@ -83,10 +98,12 @@ h1{
 
     line-height: 120%;
 }
-h1 span{
+
+h1 span {
     color: black;
 }
-h2{
+
+h2 {
     font-size: 22px;
     font-weight: bold;
     font-family: 'Palanquin';
