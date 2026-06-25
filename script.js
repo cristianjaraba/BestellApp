@@ -78,7 +78,7 @@ function renderBasketMealsDesktop() {
     for (let index = 0; index < myMeals.length; index++) {
         if (myMeals[index].amount > 0) {
             document.getElementById('basket-items-container-desktop').innerHTML += getDesktopBasketMealTemplate(myMeals[index].name,
-                myMeals[index].price,
+                (myMeals[index].price * myMeals[index].amount).toFixed(2),
                 index);
         }
     }
@@ -121,14 +121,15 @@ function subtractAmount(index) {
     if (currentMeal.amount > 0) {
         document.getElementById(`add-btn-${index}`).innerHTML = `Added ${currentMeal.amount}`;
     }
-
+    renderBasketMealsDesktop();
 }
 
 function renderBasketMeals() {
+    document.getElementById('basket-items-container').innerHTML = '';
     for (let index = 0; index < myMeals.length; index++) {
         if (myMeals[index].amount > 0) {
             document.getElementById('basket-items-container').innerHTML += getBasketMealTemplate(myMeals[index].name,
-                myMeals[index].price,
+                (myMeals[index].price * myMeals[index].amount).toFixed(2),
                 index);
         }
     }
@@ -195,11 +196,13 @@ function addAmountBasketItem(index) {
         quantityRef.innerHTML = parseInt(quantityRef.innerHTML) + 1;
     }
     addAmount(index);
+    renderBasketMeals();
     renderBasketSummary();
 }
 
 function subtractAmountBasketItem(index) {
     subtractAmount(index);
+    
     renderBasketSummary();
     renderBasketSummaryDesktop()
     if (document.getElementById(`quantity-of-${index}-desktop`) != null) {
@@ -214,6 +217,9 @@ function subtractAmountBasketItem(index) {
         quantityRef.innerHTML = parseInt(quantityRef.innerHTML) - 1;
         if (quantityRef.innerHTML == 0) {
             showBasket();
+        }
+        else{
+            renderBasketMeals();
         }
     }
 }
