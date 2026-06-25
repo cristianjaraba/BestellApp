@@ -11,12 +11,11 @@
 .pizza-section-header,
 .salat-section-header {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-
     position: relative;
-
     width: 100%;
+    background-color: #E76C1F;
 }
 
 .burger-section-header img,
@@ -24,9 +23,14 @@
 .salat-section-header img {
     height: 60px;
     width: 58px;
-
     position: absolute;
-    top: -45px;
+    /* top: -45px; */
+    /* right: 40%; */
+    margin: auto;
+    top: -86px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .burger-section-header h3,
@@ -34,14 +38,11 @@
 .salat-section-header h3 {
     /* height: 60px; */
     width: 100%;
-
-    background-color: #E76C1F;
+    /* background-color: #E76C1F; */
     color: white;
-
     font-family: 'Palanquin';
     font-size: 32px;
     font-weight: bold;
-
     text-align: center;
 }
 

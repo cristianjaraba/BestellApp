@@ -28,7 +28,7 @@ function disableAddBtn(index) {
     const addBtnRef = document.getElementById(`add-btn-${index}`);
     addBtnRef.style.color = 'rgba(231, 108, 31, 1)';
     addBtnRef.innerHTML = `Added ${myMeals[index].amount}`;
-    addBtnRef.disabled = true;
+    addBtnRef.disabled = false;
 }
 
 function ableAddBtn(index) {

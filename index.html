@@ -34,7 +34,7 @@
 
 
 <body onload="init()">
-    <header>
+    <header class="home-header">
         <div class="logo-container">
             <img class="header-media" src="./assets/icons/bestell-app-logo.svg" alt="Icon einer Tüte">
             <div class="header-text">
@@ -45,7 +45,8 @@
         <img class="menu-icon" src="./assets/icons/dehaze.svg" alt="3 horizontal lines">
     </header>
 
-    <main>
+    <div class="page-wrapper">
+        <main>
 
         <section class="hero">
             <div class="hero-media">
@@ -88,8 +89,11 @@
 
         <section class="burger-section">
             <header class="burger-section-header">
+                
                 <img src="./assets/icons/burger-icon.svg" alt="Icons eines Burgers">
-                <h3>Burger <span class="sandwiches">& Sandwiches</span></h3>
+                <h3>Burger <span class="sandwiches">& Sandwiches</span>
+                </h3>
+                
             </header>
             <div class="burger-section-meals">
                 <div id="burgers-container" class="items-container">
@@ -121,8 +125,9 @@
         </section>
 
     </main>
+    </div>
 
-    <footer>
+    <footer class="home-footer">
         <ul>
             <li><a href="./imprint.html" target="_blank">Imprint</a></li>
             <li><a href="#">Cookie Preferences</a></li>

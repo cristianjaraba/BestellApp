@@ -28,6 +28,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
+    
     .imprint {
         padding-left: max(calc(50% - 720px), 140px);
         padding-right: max(calc(50% - 720px), 140px);
@@ -51,17 +52,43 @@
         height: 389px;
         width: 390px;
     }
+
+    
 }
 
 
 @media (min-width: 1280px) {
+    .burger-section-header img, 
+    .pizza-section-header img, 
+    .salat-section-header img{
+position:unset;
+    }
+    .hero,
+    .burger-section-header, 
+    .pizza-section-header, 
+    .salat-section-header,
+    .burger-section-meals,
+    .pizza-section-meals,
+    .salat-section-meals
+
+    {
+        padding-left: max(calc(50% - 720px), 140px) !important;
+        padding-right: max(calc(50% - 720px), 140px) !important;
+    }
+    
+    .home-header,
+    .home-footer{
+         padding-left: max(calc(50% - 720px), 140px) !important;
+          padding-right: max(calc(50% - 720px), 140px) !important;
+    }
+    
     .imprint {
         padding-left: max(calc(50% - 720px), 140px);
         padding-right: max(calc(50% - 720px), 140px);
     }
 
     .buy-now-btn {
-        width: 80%;
+        width: 100%;
     }
 
     aside {
@@ -95,38 +122,37 @@
     }
 
     .items-container {
-        padding-left: max(calc(50% - 720px), 140px);
+        padding-left: 10px;
     }
 
     .burger-section-header img {
         height: 90px;
         width: 88px;
         top: -13px;
-        left: 300px;
+        left: 170px;
     }
 
     .pizza-section-header img {
         height: 94px;
         width: 88px;
         top: -12px;
-        left: 300px;
+        left: 170px;
     }
 
     .salat-section-header img {
         height: 94px;
         width: 88px;
         top: -10px;
-        left: 300px;
+        left: 170px;
     }
 
     .burger-section-header h3,
     .pizza-section-header h3,
     .salat-section-header h3 {
         text-align: unset;
-        padding-left: 400px;
-        /* display: flex;
-        align-items: end;
-        gap: 10px; */
+        width: 100vw;
+        /* padding-left: calc(max(calc(50% - 720px), 140px) + 270px) !important; */
+        padding-left: 10px;
     }
 
     .sandwiches {
@@ -143,7 +169,6 @@
         padding-left: max(calc(50% - 720px), 140px) !important;
         display: flex;
         justify-content: space-between;
-        padding-right: 40px !important;
     }
 
     .header-text-2 {
@@ -193,8 +218,7 @@
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 20px;
-
-        width: 790px;
+        width: 700px;
         height: 215px;
     }
 
@@ -288,11 +312,11 @@
 
     .meal-text h4 {
         font-size: 28px;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
     }
 
     .meal-text h5 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .meal-preis-and-btn p {
